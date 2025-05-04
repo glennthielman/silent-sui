@@ -1,6 +1,4 @@
-FROM busybox
-
-LABEL maintainer="Jeroen Pardon"
+FROM busybox:latest
 
 WORKDIR /opt/html
 

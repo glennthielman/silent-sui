@@ -1,24 +1,8 @@
-version: "3.5"
+version: "2.1"
 services:
-
-  sui:
+  deluge:
+    image: sui:latest
     container_name: sui
-    restart: always
-    build:
-      context: ./
-    environment:
-      - VIRTUAL_HOST=test.laserr.net
-    networks:
-      - nginx-proxy
-      - public
     ports:
-      - 4000:80
-    volumes:
-      - ./:/opt/html
-
-networks:
-  nginx-proxy:
-    external: true
-  public:
-    external:
-      name: public
+      - 84:80
+    restart: unless-stopped
