@@ -117,22 +117,26 @@
         function renderLinks(bookmarks) {
             let html = '';
             for (let i = 0; i < bookmarks.length; i++) {
-                var links = bookmarks[i].links;
                 html += `<div id="links_item">
-                    <h4>${bookmarks[i].category}</h4>`
-                for (let j = 0; j < links.length; j++) {
-                    html += `<a href="${links[j].url}" target="_blank" class="theme_color-border theme_text-select">${links[j].name}</a>`
-                }
+                            <h4>${bookmarks[i].category}</h4>`
+                            html += renderLink(bookmarks[i].links);
                 html += `</div>`;
             }
             document.getElementById("links_loop").innerHTML = html;
+        }
+
+        function renderLink(links) {
+            var html='';
+            for (let i = 0; i < links.length; i++) {
+                html += `<a href="${links[i].url}" target="_blank" class="theme_color-border theme_text-select">${links[i].name}</a>`
+            }
+            return html;
         }
 
         document.addEventListener('DOMContentLoaded', () => {
             fetch('data.json')
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data);
                     renderApps(data.apps);
                     renderLinks(data.bookmarks);
                     renderProviders(data.providers);

@@ -34,7 +34,7 @@
 A fork off <a href="https://github.com/jeroenpardon/sui">Jeroen Pardon Sui project</a> with the goal of creating a homelab page with no dependencies to the web, because if there is an outage you cannot download those css and js files.
 
 Features
-* focus on offline use 🙅
+* Focus on offline use 🙅
 * Less CSS and JS 🎉
 * Less dependencies on web library's 🤩
 * More vanilla JS 🍦
