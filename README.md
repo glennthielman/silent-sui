@@ -46,6 +46,11 @@ Features
 
 This project can either be run on docker or using a webserver like Nginx.
 
+### Prerequisites:
+
+* Linux, Mac, Windows
+* Docker and Docker-compose or self hosted webserver
+
 ### Installation
 
 1. Clone the repo
