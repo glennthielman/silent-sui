@@ -54,7 +54,7 @@ This project can either be run on docker or using a webserver like Nginx.
 ### Installation
 
 1. Clone the repo
-2. Change data.json with the elements you want ([icon overview](https://pictogrammers.com/library/mdi/))
+2. Change [data.json](https://github.com/glennthielman/silent-sui/blob/master/data.json) with the elements you want ([icon overview](https://pictogrammers.com/library/mdi/))
 3. Do a docker build
    ```sh
    docker build -t sui:latest
@@ -70,7 +70,9 @@ If you are using your own webserver you only need to copy the index.html, data.j
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Remove roboto.css
+- [x] Remove roboto.css
+- [ ] Github actions
+  - [ ] Docker hub image
 
 <!-- LICENSE -->
 ## License
