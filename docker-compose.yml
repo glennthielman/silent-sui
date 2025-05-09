@@ -1,8 +1,8 @@
 version: "2.1"
 services:
   deluge:
-    image: sui:latest
-    container_name: sui
+    image: sui-silent:latest
+    container_name: sui-silent
     ports:
       - 84:80
     restart: unless-stopped
