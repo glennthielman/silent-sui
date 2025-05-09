@@ -3,6 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
+<img src="https://github.com/glennthielman/silent-sui/blob/master/assets_orginal/favicon/android-chrome-512x512.png?raw=true" alt="Logo" width="80" height="80">
 <h1 align="center">Silent-Sui</h1>
   <p align="center">
     Minimal noise. Maximum data.
@@ -31,13 +32,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A fork off <a href="https://github.com/jeroenpardon/sui">Jeroen Pardon Sui project</a> with the goal of creating a homelab page with no dependencies to the web, because if there is an outage you cannot download those css and js files.
+A fork off <a href="https://github.com/jeroenpardon/sui">Jeroen Pardon Sui project</a> with the goal of creating a super fast minimalist homepage page with no dependencies to the web, because if there is an outage you don't want a broken homepage.
 
 Features
+* Minimalist design 📐
 * Focus on offline use 🙅
 * Less CSS and JS 🎉
-* Less dependencies on web library's 🤩
-* More vanilla JS 🍦
+* Less dependencies on library's 🤩
+* Vanilla JS 🍦
 * Compact files for faster downloads 🏎️
 * Small docker image 🐳
 
@@ -65,12 +67,21 @@ This project can either be run on docker or using a webserver like Nginx.
    docker compose up -d
    ```
 
-If you are using your own webserver you only need to copy the index.html, data.json and assets folder.
+If you are using your own webserver you only need to copy the following:
+ ```sh
+   | /assets
+   | favicon.ico
+   | data.json
+   | index.html 
+   ```
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Remove roboto.css
+- [x] Remove Handlebar.js in favor of vanilla JS templating
+- [x] Remove Roboto.css
+- [x] Minified assets
+- [ ] Inline JS for less network traffic
 - [ ] Github actions
   - [ ] Docker hub image
 
@@ -82,4 +93,4 @@ See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Glenn Thielman - [@the_glenn90](https://x.com/the_glenn90)
+Glenn Thielman - [Twitter](https://x.com/the_glenn90) - [LinkedIn](https://www.linkedin.com/in/glennthielman/)
