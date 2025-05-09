@@ -54,7 +54,7 @@ This project can either be run on docker or using a webserver like Nginx.
 ### Installation
 
 1. Clone the repo
-2. Change data.json with the elements you want
+2. Change data.json with the elements you want ([icon overview](https://pictogrammers.com/library/mdi/))
 3. Do a docker build
    ```sh
    docker build -t sui:latest
