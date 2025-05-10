@@ -64,7 +64,7 @@ This project can either be run on docker or using a webserver like Nginx.
 4. Modify docker-compose.yml
 5. Start using docker
    ```sh
-   docker compose up -d
+   docker-compose up -d
    ```
 
 If you are using your own webserver you only need to copy the following:
