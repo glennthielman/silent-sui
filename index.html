@@ -41,7 +41,7 @@
 
             <h2>Search options</h2>
 
-            <section id="providers">
+            <section id="provider_loop">
 
             </section>
         </div>
@@ -87,48 +87,48 @@
                             <th>Website</th>
                             <th>Prefix</th>
                         </tr>`;
-            for (let i = 0; i < providers.length; i++) {
-                html += `<tr>
-                    <td><a href="${providers[i].url}">${providers[i].name}</a></td>
-                    <td>${providers[i].prefix}</td>
-                </tr>`;
-            }
+            providers.forEach(provider => {
+                 html += `<tr>
+                            <td><a href="${provider.url}">${provider.name}</a></td>
+                            <td>${provider.prefix}</td>
+                        </tr>`;
+            });
             html += '</table>';
-            document.getElementById("providers").innerHTML = html;
+            provider_loop.innerHTML = html;
         }
 
         function renderApps(apps) {
             let html = '';
-            for (let i = 0; i < apps.length; i++) {
+            apps.forEach(app => {
                 html += `<div class="apps_item">
-                    <div class="apps_icon">
-                        <span class="iconify icon" data-icon="mdi-${apps[i].icon}"></span>
-                    </div>
-                    <div class="apps_text">
-                        <a href="http://${apps[i].url}" target="${apps[i].target}" >${apps[i].name}</a>
-                        <span id="app-address">${apps[i].url}</span>
-                    </div>
-                </div>`;
-            }
-            document.getElementById("apps_loop").innerHTML = html;
+                            <div class="apps_icon">
+                                <span class="iconify icon" data-icon="mdi-${app.icon}"></span>
+                            </div>
+                            <div class="apps_text">
+                                <a href="http://${app.url}" target="${app.target}" >${app.name}</a>
+                                <span id="app-address">${app.url}</span>
+                            </div>
+                        </div>`;
+            })
+            apps_loop.innerHTML = html;
         }
 
         function renderLinks(bookmarks) {
             let html = '';
-            for (let i = 0; i < bookmarks.length; i++) {
+            bookmarks.forEach(bookmark => {
                 html += `<div id="links_item">
-                            <h4>${bookmarks[i].category}</h4>`
-                            html += renderLink(bookmarks[i].links);
+                            <h4>${bookmark.category}</h4>`
+                            html += renderLink(bookmark.links);
                 html += `</div>`;
-            }
-            document.getElementById("links_loop").innerHTML = html;
+            });
+            links_loop.innerHTML = html;
         }
 
         function renderLink(links) {
             var html='';
-            for (let i = 0; i < links.length; i++) {
-                html += `<a href="${links[i].url}" target="_blank" class="theme_color-border theme_text-select">${links[i].name}</a>`
-            }
+            links.forEach(link => {
+                html += `<a href="${link.url}" target="_blank" class="theme_color-border theme_text-select">${link.name}</a>`
+            });
             return html;
         }
 
