@@ -1,5 +1,8 @@
 README.md
 LICENSE
 Dockerfile
+.git
+.gitignore
+.git/
 docker-compose.yml
 assets_original/
