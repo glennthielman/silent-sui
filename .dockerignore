@@ -1,8 +1,9 @@
 README.md
 LICENSE
+**.DS_Store
 Dockerfile
 .git
 .gitignore
-.git/
+.dockerignore
 docker-compose.yml
-assets_original/
+assets_orginal
