@@ -1,6 +1,6 @@
 version: "2.1"
 services:
-  deluge:
+  sui:
     image: sui-silent:latest
     container_name: sui-silent
     ports:
